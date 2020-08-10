@@ -11,19 +11,19 @@ import "../../main.scss";
 
 function About() {
   return (
-    <div className=" ">
-      <Parallax bgImage={aboutus} bgImageAlt="the cat" strength={300}>
+    <div className="">
+      <Parallax bgImage={aboutus} bgImageAlt="trekvista about" strength={300}>
         <div className=" about-text mx-auto sticky animation-fadein">About Us</div>
         <div style={{ height: "300px", width: "1000px" }} />
       </Parallax>
 
-      <div className="aboutme mx-auto justify-content ">
-      
-        <p >We at trekvista are thriving hard to build a strong trekking community. Quality services with affordability is our main concern. 
-        </p>
-        
-
+      <div className=" container about-us-text">
+        <p className="my-3"> <strong className="brand-name">TrekVista</strong> is a trekking organisation which organises treks in Uttarakhand. At trekvista we aim to build a strong trekking community. Quality services with affordability is our main concern. No-one knows mountains better than the locals. Taking this in concern we work with locals. With their expertise in trekking and their cheerful nature our customers love us. Come and explore the Himalayas with us.</p>
+        <hr></hr>
       </div>
+
+     
+   
 
       <div>
         <Aboutinfo

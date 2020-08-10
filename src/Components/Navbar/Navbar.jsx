@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <div className="container-fluid nav_bg">
+      <div className=" nav_bg">
         <div className="row">
           <div className=" mx-auto">
-            <nav className="navbar navbar-expand-md navbar-light bg-light navanim">
+            <nav className="navbar navbar-expand-md navbar-dark bg-dark navanim">
               <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                   TrekVista

@@ -9,8 +9,6 @@
   z-index: 1;
 }
 
-
-
 .navbar {
   color: black !important ;
 }
@@ -80,6 +78,11 @@ code {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 
   padding: 30px;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .card-width {
@@ -158,15 +161,7 @@ code {
 
 /* about */
 
-
-
-
-
-
-
-
 .about-image {
- 
   object-fit: scale-down;
   width: 100%;
   height: 100%;
@@ -180,40 +175,28 @@ code {
   z-index: 0;
   display: flex;
   justify-content: space-around;
-  
-  
-
 }
-
-
 
 .about-text {
   font-size: 50px;
-  
 
-  left:45vw;
-  top:50px;
+  left: 45vw;
+  top: 50px;
   display: inline-block;
   color: white;
   text-shadow: 0 13.36px 8.896px black, 0 -2px 1px #fff;
   letter-spacing: -4px;
 
   align-self: flex-end;
-  
 }
 .sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   padding: 5px;
- 
 }
 
-
-
 /* parallax testing */
-
-
 
 /* end */
 .bgblack {
@@ -222,24 +205,21 @@ code {
 
 .floatleft {
   float: left;
-  
 }
 
-.tent{
+.tent {
   width: 60%;
 }
 
 .trekleader {
   width: 40%;
   margin-left: 10px;
-  
 }
 
-.iconshrink{
+.iconshrink {
   width: 50%;
   margin-left: 10px;
 }
-
 
 /* Typewriter */
 
@@ -280,6 +260,4 @@ code {
     border-right-color: transparent;
   }
 }
-
-
 
