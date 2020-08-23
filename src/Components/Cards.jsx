@@ -1,12 +1,12 @@
 import React from "react";
-import kedarkantha from "../Images/kedarkantha.jpg";
+
 import { NavLink } from "react-bootstrap";
 
 function Cards(props) {
   return (
     <div className="col">
       <div className="card card-width  ">
-        <img src={props.imgsrc} class="card-img-top" alt="trekvista" />
+        <img src={props.imgsrc} className="card-img-top" alt="trekvista" />
         <div className="card-body">
           <h5 className="card-title font-weight-bold">{props.title}</h5>
           <p className="card-text">

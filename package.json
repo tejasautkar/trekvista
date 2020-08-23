@@ -9,11 +9,12 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^5.0.0-alpha1",
+    "formik": "^2.1.5",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
     "react-body-backgroundcolor": "^1.2.1",
-    "react-bootstrap": "^1.2.2",
+    "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-hooks": "^1.0.1",
     "react-icons": "^3.10.0",
@@ -22,7 +23,9 @@
     "react-script-tag": "^1.1.2",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
-    "styled-components": "^5.1.1"
+    "react-sticky-footer": "0.1.0-rc3",
+    "styled-components": "^5.1.1",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "start": "react-scripts start",

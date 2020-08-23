@@ -5,25 +5,40 @@ import tent from "../../Images/tent.png";
 import food from "../../Images/food.png";
 import health from "../../Images/health.png";
 import trekleader from "../../Images/trekleader.png";
-import equipments from "../../Images/equipments.png"
-import { Parallax, Background } from "react-parallax";
+import equipments from "../../Images/equipments.png";
+import { Parallax } from "react-parallax";
 import "../../main.scss";
 
 function About() {
   return (
-    <div className="">
+    <div className="my-1">
       <Parallax bgImage={aboutus} bgImageAlt="trekvista about" strength={300}>
-        <div className=" about-text mx-auto sticky animation-fadein">About Us</div>
+        <div className=" about-text mx-auto sticky animation-fadein">
+          About Us
+        </div>
         <div style={{ height: "300px", width: "1000px" }} />
       </Parallax>
 
-      <div className=" container about-us-text">
-        <p className="my-3"> <strong className="brand-name">TrekVista</strong> is a trekking organisation which organises treks in Uttarakhand. At trekvista we aim to build a strong trekking community. Quality services with affordability is our main concern. No-one knows mountains better than the locals. Taking this in concern we work with locals. With their expertise in trekking and their cheerful nature our customers love us. Come and explore the Himalayas with us.</p>
+      <div className=" container about-us-text ">
+        <p className="my-5">
+          {" "}
+          <strong className="brand-name">TrekVista</strong> is a trekking
+          organisation which organises treks in Uttarakhand.
+          <p>
+            At trekvista we aim to build a strong trekking community. Quality
+            services with affordability is our main concern.
+            <p>
+              No-one knows mountains better than the locals. Taking this in
+              concern we work with locals.
+              <p>
+                With their expertise in trekking and their cheerful nature our
+                customers love us. Come and explore the Himalayas with us.
+              </p>
+            </p>{" "}
+          </p>{" "}
+        </p>
         <hr></hr>
       </div>
-
-     
-   
 
       <div>
         <Aboutinfo
@@ -51,7 +66,8 @@ function About() {
           imgsrc={equipments}
           classprop="iconshrink"
           title="Trekking Gears"
-          desc=" We provide trekking equipments like crampons which makes walking on snow a bit easier, gaiters to prevent snow and rocks to enter your shoes and headlamps incase we are hiking at night. Trekking poles/sticks can be rented. "  />
+          desc=" We provide trekking equipments like crampons which makes walking on snow easier, gaiters to prevent snow and rocks from entering your shoes and headlamps incase we are hiking at night. Trekking poles/sticks can be rented. "
+        />
 
         <Aboutinfo
           imgsrc={trekleader}

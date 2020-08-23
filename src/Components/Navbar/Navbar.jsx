@@ -1,21 +1,25 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
 
+import { NavLink } from "react-router-dom";
+import logo from "../../Images/trekvistalogo.png";
 function Navbar() {
   return (
     <div>
       <div className=" nav_bg">
         <div className="row">
           <div className=" mx-auto">
-            <nav className="navbar navbar-expand-md navbar-dark bg-dark navanim">
+            <nav className="navbar navbar-expand-md navbar-dark bg-info nav-bg navanim">
               <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
-                  TrekVista
+                  <img
+                    src={logo}
+                    className="trekvistalogo"
+                    alt="trekvista logo"
+                  />
                 </NavLink>
                 <button
-                  className="navbar-toggler"
                   type="button"
+                  className="navbar-toggler navbar-toggle"
                   data-toggle="collapse"
                   data-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent"
