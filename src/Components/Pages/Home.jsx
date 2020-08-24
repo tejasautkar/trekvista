@@ -47,7 +47,7 @@ function Home({ history }) {
                 </Button>
               
             </div>
-            <hr my-2></hr>
+            <hr className='my-2'></hr>
           </div>
         </div>
       </div>

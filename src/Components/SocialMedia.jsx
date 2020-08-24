@@ -9,7 +9,7 @@ import whatsapp from "../Images/whatsapp.png";
 
 function SocialMedia() {
   return (
-    <div class="icon-bar">
+    <div className="icon-bar">
 
 
       <a
@@ -57,7 +57,7 @@ function SocialMedia() {
         href="https://instagram.com/trekvista"
         target="_blank"
         rel="noopener noreferrer"
-        class="instagram"
+        className="instagram"
         
       >
         <img className=" icon" src={instagram} alt="trekvista instagram" />
