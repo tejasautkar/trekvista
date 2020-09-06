@@ -1,35 +1,66 @@
-label{
-    font-weight: bold;
-    display: flex;
-    
+label {
+  font-weight: bold;
+  display: flex;
 }
 
-
-
-input[type='text']
-input[type='email'],
-textarea{
-    display: block;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solod #ccc;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    
+button {
+  width: 80px;
+  border: 1px 1px 1px 1px;
+  font-size: 18px;
+  color: white;
+  padding: 7px 10px;
+  background-color: green;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.form-control{
-    padding-bottom: 20px;
-    
-    
-
+.buttonHolder {
+  text-align: center;
+  padding-top: 20px;
 }
 
-.error{
-    color: red;
+button:hover {
+  background-color: black;
 }
 
+input[type="text"] input[type="email"],
+textarea {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: black;
+  background-color: #fff;
+  background-image: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: inline-block;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heading {
+  color: darkblue;
+}
+
+.errormessage {
+  display: inline;
+  color: red;
+}
+
+#container {
+  display: flex; /* establish flex container */
+  flex-direction: column; /* stack flex items vertically */
+  justify-content: center; /* center items vertically, in this case */
+  align-items: center; /* center items horizontally, in this case */
+  min-height: calc(100vh - 8vh);
+}
+.fieldform {
+  padding: 10px;
+}

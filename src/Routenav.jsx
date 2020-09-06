@@ -1,14 +1,11 @@
 import React from "react";
-import {
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Treks from "./Components/Pages/Treks";
 import Home from "./Components/Pages/Home";
 import About from "./Components/Pages/About";
 
 import Contact from "./Components/Pages/Contact";
+
 
 function Routenav() {
   return (

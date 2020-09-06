@@ -1,45 +1,45 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "../Pages/Contact.css";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup"; //yup library to validate. Shortens the code
 
-const initialValues = { name: "", email: "",number:"", comments: "" };
-const onSubmit = (values,onSubmitProps) => {
-  document.getElementById('formthankyou').innerHTML("Thank you! We will contact you soon!")
-  
+const initialValues = { name: "", email: "", number: "", comments: "" };
+
+const notify = () =>
+  toast.success(" Thank you! We will contact you soon", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+  });
+
+const onSubmit = (values, onSubmitProps) => {
+  notify();
   console.log("Form data", values);
-  console.log("Submit Props",onSubmitProps)
-  onSubmitProps.resetForm()
- 
- 
- 
-  
+
+  onSubmitProps.resetForm();
 };
 
 const validationSchema = Yup.object({
-  name: Yup.string().required("Required!"),
-  email: Yup.string().email("Invalid email format"),
-  comments: Yup.string().required("Required!"),
+  name: Yup.string().required(" Required!"),
+  email: Yup.string().required(" Required!").email("Invalid email format"),
+
   number: Yup.string()
-    .length(10, "Enter a valid 10 digit mobile number")
-    ,
+    .required(" Required!")
+    .length(10, "Enter a valid 10 digit mobile number"),
 });
-
-
-
-
-
-
-
-
 
 function Contact() {
   return (
-    <div className="justify-content-center">
-      <h1 className="text-center">Contact Us</h1>
-      <div id="formthankyou"></div>
-      <div className="container form-group justify-content-center">
+    <Fragment>
+      <div className=" form-group" id="container">
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -47,35 +47,43 @@ function Contact() {
         >
           <Form>
             <div className="form-control">
-              <label htmlFor="name">Name</label>
-              <Field type="text" id="name" name="name" />
-              <ErrorMessage name="name" />
-            </div>
-            <div className="form-control">
-              <label htmlFor="email">Email</label>
-              <Field type="email" id="email" name="email" />
-              <ErrorMessage name="email" />
-            </div>
+              <div className="text-center heading">
+                <h1>Contact Us</h1>
+                <hr></hr>
+              </div>
+              <div className="fieldform">
+                <label htmlFor="name">Name</label>
+                <Field type="text" id="name" name="name" />
+                <div className="errormessage">
+                  <ErrorMessage name="name" />
+                </div>
+              </div>
+              <div className="fieldform">
+                <label htmlFor="email">Email</label>
+                <Field type="email" id="email" name="email" />
+                <div className="errormessage">
+                  <ErrorMessage name="email" />
+                </div>
+              </div>
 
-            <div className="form-control">
-              <label htmlFor="number">Phone Number</label>
-              <Field type="number" id="number" name="number" />
-              <ErrorMessage name="number" />
+              <div className="fieldform">
+                <label htmlFor="number">Phone Number</label>
+                <Field type="number" id="number" name="number" />
+                <div className="errormessage">
+                  <ErrorMessage name="number" />
+                </div>
+              </div>
             </div>
-
-            <div className="form-control">
-              <label htmlFor="comments">Message</label>
-              <Field as="textarea" id="comments" name="comments" />
-              <ErrorMessage name="comments" />
+            <div className="buttonHolder">
+              <button id="submit" type="submit">
+                Submit
+              </button>
             </div>
-
-            <button id="submit" type="submit">
-              Submit
-            </button>
+            <ToastContainer />
           </Form>
         </Formik>
       </div>
-    </div>
+    </Fragment>
   );
 }
 
